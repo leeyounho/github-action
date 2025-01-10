@@ -13,4 +13,6 @@
         if: github.event_name == 'xxxxxxx'
         run: |
           echo "Run Step 2, Say Hello"
-      
+      - name: Step 3
+        run: |
+          echo "Run Step 3, Say Hello"
