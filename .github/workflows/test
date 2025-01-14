@@ -1,0 +1,14 @@
+---
+name: TEST
+on: workflow_dispatch
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config: [ {line-id: P1, rv-network: 239.30.30}, {line-id: P2, rv-network: 239.30.31}, {line-id: P3, rv-network: 239.30.32} ]
+    steps:
+      - name: step1
+        run: echo ${{ matrix.config.line-id }}
+      - name: step2
+        run: echo ${{ matrix.config.rv-network }}
